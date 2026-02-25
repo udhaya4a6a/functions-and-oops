@@ -1,0 +1,25 @@
+def calculate_tot_cost(Cart):
+    """
+    Calculate the total cost of items in a shopping cart.
+    Args:
+        Cart (list): A list of dictionaries, each representing an item with keys 'item_name', 'quantity', and 'price_per_item'.
+    Returns:
+        float: The total cost of all items in the cart.
+     """
+    total_cost = 0.0
+    for item in Cart:
+        
+        total_cost += item['quantity'] * item['price_per_item']
+    return total_cost
+
+# Sample data for the shopping cart
+Cart=[
+{"item_name": "Apple", "quantity": 2, "price_per_item": 3.0},
+{"item_name": "Banana", "quantity": 5, "price_per_item": 1.0},
+{"item_name": "Orange", "quantity": 3, "price_per_item": 2.0}
+    ]
+    
+# Example usage
+TOTAL_cost=calculate_tot_cost(Cart)
+print(f"Total cost of items in the cart: ${TOTAL_cost}")
+
