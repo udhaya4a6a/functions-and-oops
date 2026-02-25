@@ -1,0 +1,11 @@
+def sum_n(n):
+    """
+    Docstring for sum_n
+    
+    :param n: Description
+    """ 
+    if n==0:
+        return 0
+    else:
+        return n + sum_n(n-1) 
+print(sum_n(3))       
